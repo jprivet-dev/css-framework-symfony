@@ -1,8 +1,8 @@
-# CSS frameworks & Symfony
+# CSS frameworks, Symfony & Twig
 
 ## Presentation
 
-Which is the best CSS framework to use with Symfony?
+Which is the best CSS framework to use with Symfony and Twig?
 
 ## Prerequisites
 
@@ -15,9 +15,58 @@ Be sure to install the latest version of:
 
 TODO
 
+## Structure
+
+```shell
+$ tree -L 2 -v --dirsfirst -A
+.
+├── apps
+│   ├── bootstrap
+│   │   ├── easy
+│   │   └── expert
+│   ├── foundation
+│   │   ├── easy
+│   │   └── expert
+│   ├── pico
+│   │   ├── easy
+│   │   └── expert
+│   └── tailwind
+│       ├── easy
+│       └── expert
+└── README.md
+```
+
+## Levels of use
+
+We will simulate two levels of use of the framework:
+
+- Level 1 - easy:
+    - No imposed graphic identity.
+    - Exclusive use of the framework's default functions, components and theme, without overhead.
+- Level 2 - expert:
+    - The customer's graphic identity is imposed, with precise mock-up to integrate.
+    - Creating a theme, customizing and/or extending the framework is essential to apply colors and get closer to the style of the customer's graphic charter, with use of global options, use of the extended color system, etc.
+
+## Use cases
+
 ## Resources
 
-TODO
+- Symfony:
+    - https://symfony.com/doc/current/setup.html#the-symfony-demo-application
+    - https://symfony.com/doc/current/configuration/multiple_kernels.html
+- CSS Frameworks:
+    - Bootstrap:
+        - https://getbootstrap.com/
+    - Foundation:
+        - https://get.foundation/
+    - Pico:
+        - https://picocss.com/
+    - Tailwind:
+        - https://tailwindcss.com/
+- Examples for use cases:
+    - https://colorlib.com/wp/themes/
+    - https://preview.colorlib.com/theme/bootstrap/contact-form-04/
+    - https://colorlib.com/wp/wp-content/uploads/sites/2/contact-form-04.jpg
 
 ## Comments, suggestions?
 
