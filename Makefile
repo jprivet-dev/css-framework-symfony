@@ -33,3 +33,9 @@ help: ## Print self-documented Makefile
 .PHONY: pico_easy_serve
 pico_easy_serve: ## Run a local web server
 	symfony serve --dir=apps/pico/easy -d
+
+## — ALL ⚙️  ———————————————————————————————————————————————————————————————————
+
+.PHONY: servers_stop
+servers_stop: ## Stop all local web servers
+	symfony local:server:stop --all
