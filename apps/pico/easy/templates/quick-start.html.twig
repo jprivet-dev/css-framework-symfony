@@ -7,6 +7,9 @@
     <meta name="color-scheme" content="light dark" />
     <title>Preview • Pico CSS</title>
     <meta name="description" content="A pure HTML example, without dependencies." />
+    {% block stylesheets %}
+    {% endblock %}
+
     {% block javascripts %}
         {% block importmap %}{{ importmap('app') }}{% endblock %}
     {% endblock %}

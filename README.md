@@ -38,7 +38,7 @@ $ tree -L 2 -v --dirsfirst -A
 
 ## Levels of use
 
-We will simulate two levels of use of the framework:
+We will simulate two levels of use of the CSS framework:
 
 - Level 1 - easy:
     - No imposed graphic identity.
@@ -49,11 +49,29 @@ We will simulate two levels of use of the framework:
 
 ## Use cases
 
+## Project basic install
+
+```shell
+symfony new apps/pico/easy --no-git
+composer require symfony/asset-mapper symfony/asset symfony/twig-pack
+composer require symfony/maker-bundle --dev
+```
+
+## CSS framework quick start
+
+### Pico
+
+```shell
+symfony console importmap:require @picocss/pico@2
+````
+
 ## Resources
 
 - Symfony:
     - https://symfony.com/doc/current/setup.html#the-symfony-demo-application
     - https://symfony.com/doc/current/configuration/multiple_kernels.html
+- Assets:
+- 
 - CSS Frameworks:
     - Bootstrap:
         - https://getbootstrap.com/

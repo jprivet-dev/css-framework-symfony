@@ -1,1 +1,1 @@
-@use "../../vendor/picocss";
+@import url("../vendor/@picocss/pico/css/pico.min.css");
