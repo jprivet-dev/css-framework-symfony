@@ -6,4 +6,7 @@
  */
 import './styles/app.css';
 
+import './js/minimal-theme-switcher.js';
+import './js/modal.js';
+
 console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');

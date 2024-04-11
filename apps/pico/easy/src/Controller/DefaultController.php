@@ -8,9 +8,9 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class DefaultController extends AbstractController
 {
-    #[Route('/quick-start')]
-    public function quickStart(): Response
+    #[Route('/')]
+    public function index(): Response
     {
-        return $this->render('quick-start.html.twig');
+        return $this->render('index.html.twig');
     }
 }
