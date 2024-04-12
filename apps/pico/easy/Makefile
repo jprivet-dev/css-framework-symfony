@@ -1,3 +1,3 @@
 CSS_FRAMEWORK_NAME = "PICO ✨"
-INSTALL_DEPENDENCIES = start composer_install npm_install
+INSTALL_DEPENDENCIES = start composer_install
 include ./../../../shared.mk
