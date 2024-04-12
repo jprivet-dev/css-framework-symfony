@@ -51,19 +51,40 @@ We will simulate two levels of use of the CSS framework:
 
 ## Project basic install
 
+1 - Create an empty new project, with [MakerBundle](https://symfony.com/bundles/SymfonyMakerBundle/current/index.html):
+
 ```shell
 symfony new apps/pico/easy --no-git
-composer require symfony/asset-mapper symfony/asset symfony/twig-pack
 composer require symfony/maker-bundle --dev
 ```
 
-## CSS framework quick start
+2 - Or use [Webpack Encore](https://symfony.com/doc/current/frontend/encore/index.html):
+
+```shell
+composer require symfony/webpack-encore-bundle
+npm install
+```
+
+2' - Use [AssetMapper](https://symfony.com/doc/current/frontend/asset_mapper.html):
+
+```shell
+composer require symfony/asset-mapper symfony/asset symfony/twig-pack
+```
+
+## CSS framework quick start (minimal steps)
 
 ### Pico
+
+Install:
 
 ```shell
 symfony console importmap:require @picocss/pico@2
 ````
+
+Import:
+
+- https://github.com/picocss/examples/blob/master/v2-html/js/minimal-theme-switcher.js
+- https://github.com/picocss/examples/blob/master/v2-html/js/modal.js
 
 ## Resources
 
