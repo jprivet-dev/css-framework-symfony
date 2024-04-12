@@ -34,13 +34,14 @@ help: ## Print self-documented Makefile
 
 ## — PROJECT 🚀 ———————————————————————————————————————————————————————————————
 
+.PHONY: install
+install: $(INSTALL_DEPENDENCIES) ## Start and install a local project (the very first time)
+
 .PHONY: start
-start: ## Run a local web server
-	symfony serve -d
+start: server_start ## Start the project
 
 .PHONY: stop
-stop: ## Stop the local web server
-	symfony server:stop
+stop: server_stop ## Stop the project
 
 ## — SYMFONY 🎵 ———————————————————————————————————————————————————————————————
 
@@ -48,9 +49,51 @@ stop: ## Stop the local web server
 cc: ## Clear the cache
 	symfony console cache:clear
 
-.PHONY: stop_all
-stop_all: ## Stop all local web servers
+.PHONY: server_start
+server_start: ## Run a local web server
+	symfony server:start -d
+
+.PHONY: server_stop
+server_stop: ## Stop the local web server
+	symfony server:stop
+
+.PHONY: servers_stop_all
+servers_stop_all: ## Stop all local web servers
 	symfony server:stop --all
+
+## — COMPOSER 🧙 ——————————————————————————————————————————————————————————————
+
+.PHONY: composer
+composer: ## Run composer. Pass the parameter with "p=" (example: make composer p="require --dev phpunit/phpunit")
+	@$(eval p ?=)
+	composer $(p)
+
+.PHONY: composer_version
+composer_version: ## Composer version
+	composer --version
+
+.PHONY: composer_install
+composer_install: ## Install packages using composer
+	composer install
+
+.PHONY: composer_install@prod
+composer_install@prod: ## Install packages using composer (PROD)
+	composer install --verbose --prefer-dist --no-progress --no-interaction --no-dev --optimize-autoloader
+
+## — NPM 📦 ———————————————————————————————————————————————————————————————————
+
+.PHONY: npm
+npm: ## Run npm. Pass the parameter with "p=" (example: make npm p="install my-lib")
+	@$(eval p ?=)
+	npm $(p)
+
+.PHONY: npm_version
+npm_version: ## npm version
+	npm --version
+
+.PHONY: npm_install
+npm_install: ## Install dependencies using npm
+	npm install
 
 ## — ASSETS 🎨‍ ————————————————————————————————————————————————————————————————
 
