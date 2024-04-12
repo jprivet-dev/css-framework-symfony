@@ -86,6 +86,29 @@ Import:
 - https://github.com/picocss/examples/blob/master/v2-html/js/minimal-theme-switcher.js
 - https://github.com/picocss/examples/blob/master/v2-html/js/modal.js
 
+### Foundation
+
+Install:
+
+```shell
+npm install foundation-sites
+npm install jquery --save-dev
+```
+
+Get the HTML from https://get.foundation/templates-previews-sites-f6-xy-grid/news-magazine.html.
+
+## Troubleshooting
+
+### Error: ENOSPC: System limit for number of file watchers reached
+
+On `npm run watch`, we can have the following error:
+
+```
+Watchpack Error (watcher): Error: ENOSPC: System limit for number of file watchers reached, watch '/home/.../foundation/easy'
+```
+
+Apply the solution on https://stackoverflow.com/a/55763478/13480534.
+
 ## Resources
 
 - Symfony:
