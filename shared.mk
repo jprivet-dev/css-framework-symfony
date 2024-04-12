@@ -1,3 +1,8 @@
+CSS_FRAMEWORK_NAME ?= "SET A NAME 🚀"
+INSTALL_DEPENDENCIES ?= server_start composer_install
+START_DEPENDENCIES ?= server_start
+STOP_DEPENDENCIES ?= server_stop
+
 ## — 🎵 🐳 CSS FRAMEWORK MAKEFILE 🐳 🎵 ———————————————————————————————————————
 
 # Print self-documented Makefile:
@@ -38,10 +43,10 @@ help: ## Print self-documented Makefile
 install: $(INSTALL_DEPENDENCIES) ## Start and install a local project (the very first time)
 
 .PHONY: start
-start: server_start ## Start the project
+start: $(START_DEPENDENCIES) ## Start the project
 
 .PHONY: stop
-stop: server_stop ## Stop the project
+stop: $(STOP_DEPENDENCIES) ## Stop the project
 
 ## — SYMFONY 🎵 ———————————————————————————————————————————————————————————————
 
@@ -94,6 +99,24 @@ npm_version: ## npm version
 .PHONY: npm_install
 npm_install: ## Install dependencies using npm
 	npm install
+
+##
+
+.PHONY: npm_watch
+npm_watch: ## Compile assets and automatically re-compile when files change
+	npm run watch
+
+.PHONY: npm_server
+npm_server: ## Run a dev-server that can sometimes update your code without refreshing the page
+	npm run dev-server
+
+.PHONY: npm_dev
+npm_dev: ## Compile assets once
+	npm run dev
+
+.PHONY: npm_build
+npm_build: ## On deploy, create a production build
+	npm run build
 
 ## — ASSETS 🎨‍ ————————————————————————————————————————————————————————————————
 
