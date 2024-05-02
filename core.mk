@@ -1,7 +1,24 @@
+#
+# EXECUTABLES (LOCAL)
+#
+
 CSS_FRAMEWORK_NAME ?= "SET A NAME 🚀"
 INSTALL_DEPENDENCIES ?= server_start composer_install
 START_DEPENDENCIES ?= server_start
 STOP_DEPENDENCIES ?= server_stop
+
+COMPOSER ?= composer
+
+#
+# COLORS
+#
+
+RESET     = "\\033[0m"
+BLUE      = "\\033[34m"
+GREEN     = "\\033[32m"
+RED       = "\\033[31m"
+YELLOW    = "\\033[33m"
+UNDERLINE = "\\033[4m"
 
 ## — 🎵 🐳 CSS FRAMEWORK MAKEFILE 🐳 🎵 ———————————————————————————————————————
 
