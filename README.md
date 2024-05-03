@@ -47,6 +47,22 @@ We will simulate two levels of use of the CSS framework:
     - The customer's graphic identity is imposed, with precise mock-up to integrate.
     - Creating a theme, customizing and/or extending the framework is essential to apply colors and get closer to the style of the customer's graphic charter, with use of global options, use of the extended color system, etc.
 
+## Use cases
+
+### Basic use case 1: simple example
+
+Minimal steps of install and display of a simple example
+
+### Basic use case 2: login form
+
+The idea is to use the default connection form layouts of the CSS frameworks, and to check that the coupling with what Symfony generates by default (https://symfony.com/doc/current/security.html) is as easy as possible.
+
+```shell
+composer require symfony/security-bundle
+symfony console make:user
+symfony console make:auth
+```
+
 ## Project basic install
 
 1 - Create an empty new project, with [MakerBundle](https://symfony.com/bundles/SymfonyMakerBundle/current/index.html):
@@ -130,6 +146,50 @@ Import:
 - https://github.com/picocss/examples/blob/master/v2-html/js/minimal-theme-switcher.js
 - https://github.com/picocss/examples/blob/master/v2-html/js/modal.js
 
+Next time, just run the following commands:
+
+```shell
+cd apps/pico/basic
+make start # And go on the Local Web Server (on https://127.0.0.1:8000/ for example)
+```
+
+### Basic use case 2: login form
+
+```shell
+$ symfony console make:auth
+
+ What style of authentication do you want? [Empty authenticator]:
+  [0] Empty authenticator
+  [1] Login form authenticator
+ > Login form authenticator
+
+ The class name of the authenticator to create (e.g. AppCustomAuthenticator):
+ > InMemoryUserAuthenticator
+
+ Choose a name for the controller class (e.g. SecurityController) [SecurityController]:
+ > 
+
+ Enter the User class that you want to authenticate (e.g. App\Entity\User) []:
+ > Symfony\Component\Security\Core\User\InMemoryUser
+
+ Do you want to generate a '/logout' URL? (yes/no) [yes]:
+ > 
+
+ Do you want to support remember me? (yes/no) [yes]:
+ > 
+
+ How should remember me be activated? [Activate when the user checks a box]:
+  [0] Activate when the user checks a box
+  [1] Always activate remember me
+ > 
+```
+
+Symfony Password Hash Utility:
+
+```shell
+symfony console security:hash-password myPassword
+```
+
 ### Resources
 
 - https://picocss.com/
@@ -191,6 +251,9 @@ Apply the solution on https://stackoverflow.com/a/55763478/13480534.
 - Symfony:
     - https://symfony.com/doc/current/setup.html#the-symfony-demo-application
     - https://symfony.com/doc/current/configuration/multiple_kernels.html
+    - Security:
+      - https://symfony.com/doc/current/security.html#form-login
+      - https://github.com/symfony/symfony/blob/7.1/src/Symfony/Component/Security/Core/User/InMemoryUser.php
 - Other CSS Frameworks:
     - https://milligram.io/
 - Examples for use cases:
