@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Usage:
-# $ . scripts/new-asset.sh "apps/foundation/easy" "PICO ✨"
+# $ . scripts/new-asset.sh "apps/foundation/basic" "PICO ✨"
 
 path=$1
 name=$2

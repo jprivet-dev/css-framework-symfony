@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Usage:
-# $ . scripts/new-encore.sh "apps/foundation/easy" "FOUNDATION ❄️"
+# $ . scripts/new-encore.sh "apps/foundation/basic" "FOUNDATION ❄️"
 
 path=$1
 name=$2

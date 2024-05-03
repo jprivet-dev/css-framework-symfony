@@ -22,16 +22,16 @@ $ tree -L 2 -v --dirsfirst -A
 .
 ├── apps
 │   ├── bootstrap
-│   │   ├── easy
+│   │   ├── basic
 │   │   └── expert
 │   ├── foundation
-│   │   ├── easy
+│   │   ├── basic
 │   │   └── expert
 │   ├── pico
-│   │   ├── easy
+│   │   ├── basic
 │   │   └── expert
 │   └── tailwind
-│       ├── easy
+│       ├── basic
 │       └── expert
 └── README.md
 ```
@@ -40,21 +40,19 @@ $ tree -L 2 -v --dirsfirst -A
 
 We will simulate two levels of use of the CSS framework:
 
-- Level 1 - easy:
+- Level 1 - basic:
     - No imposed graphic identity.
     - Exclusive use of the framework's default functions, components and theme, without overhead.
 - Level 2 - expert:
     - The customer's graphic identity is imposed, with precise mock-up to integrate.
     - Creating a theme, customizing and/or extending the framework is essential to apply colors and get closer to the style of the customer's graphic charter, with use of global options, use of the extended color system, etc.
 
-## Use cases
-
 ## Project basic install
 
 1 - Create an empty new project, with [MakerBundle](https://symfony.com/bundles/SymfonyMakerBundle/current/index.html):
 
 ```shell
-symfony new apps/pico/easy --no-git
+symfony new apps/pico/basic --no-git
 composer require symfony/maker-bundle --dev
 ```
 
@@ -71,22 +69,36 @@ npm install
 composer require symfony/asset-mapper symfony/asset symfony/twig-pack
 ```
 
-## CSS framework quick start (minimal steps)
+## Bootstrap
 
-### Pico
+### Basic use case 1: simple example (minimal steps of install)
 
 Install:
 
 ```shell
-symfony console importmap:require @picocss/pico@2
-````
+cd symfony-css-frameworks
+. scripts/new-encore.sh "apps/bootstrap/basic" "BOOTSTRAP 🅱️"
+```
 
-Import:
+```shell
+cd apps/bootstrap/basic
+npm install bootstrap
+npm install sass-loader sass --save-dev
+```
 
-- https://github.com/picocss/examples/blob/master/v2-html/js/minimal-theme-switcher.js
-- https://github.com/picocss/examples/blob/master/v2-html/js/modal.js
+HTML examples used:
 
-### Foundation
+- https://getbootstrap.com/docs/5.3/examples/album/
+
+### Resources
+
+- https://getbootstrap.com/
+- https://github.com/twbs/bootstrap/tree/main/site/content/docs/5.3/examples
+- https://symfony.com/doc/current/frontend/encore/bootstrap.html
+
+## Foundation
+
+### Basic use case 1: simple example (minimal steps of install)
 
 Install:
 
@@ -99,36 +111,42 @@ HTML examples used:
 
 - https://get.foundation/templates-previews-sites-f6-xy-grid/news-magazine.html.
 
-### Tailwind
+### Resouces
+
+- https://get.foundation/
+
+## Pico
+
+### Basic use case 1: simple example (minimal steps of install)
+
+Install:
+
+```shell
+symfony console importmap:require @picocss/pico@2
+````
+
+Import:
+
+- https://github.com/picocss/examples/blob/master/v2-html/js/minimal-theme-switcher.js
+- https://github.com/picocss/examples/blob/master/v2-html/js/modal.js
+
+### Resources
+
+- https://picocss.com/
+
+## Tailwind
+
+### Basic use case 1: simple example (minimal steps of install)
 
 Install:
 
 ```shell
 cd symfony-css-frameworks
-. scripts/new-encore.sh "apps/bootstrap/easy" "BOOTSTRAP 🅱️"
+. scripts/new-encore.sh "apps/tailwind/basic" "TAILWIND 🌊"
 ```
 
 ```shell
-cd apps/bootstrap/easy
-npm install bootstrap
-npm install sass-loader sass --save-dev
-```
-
-HTML examples used:
-
-- https://getbootstrap.com/docs/5.3/examples/album/
-
-### Tailwind
-
-Install:
-
-```shell
-cd symfony-css-frameworks
-. scripts/new-encore.sh "apps/tailwind/easy" "TAILWIND 🌊"
-```
-
-```shell
-cd apps/tailwind/easy
+cd apps/tailwind/basic
 npm install -D tailwindcss postcss postcss-loader autoprefixer
 npx tailwindcss init -p
 ```
@@ -139,6 +157,15 @@ HTML examples used:
 - https://tailwindui.com/components/marketing/sections/feature-sections
 - https://tailwindui.com/components/marketing/elements/flyout-menus
 
+### Resources
+
+- https://tailwindcss.com/
+- https://tw-elements.com/
+- https://www.material-tailwind.com/
+- https://www.yourigalescot.com/fr/blog/comment-integrer-tailwindcss-v3-a-un-projet-symfony-avec-webpack-encore
+- https://flowbite.com/
+- https://alpinejs.dev/
+
 ## Troubleshooting
 
 ### Error: ENOSPC: System limit for number of file watchers reached
@@ -146,7 +173,7 @@ HTML examples used:
 On `npm run watch`, we can have the following error:
 
 ```
-Watchpack Error (watcher): Error: ENOSPC: System limit for number of file watchers reached, watch '/home/.../foundation/easy'
+Watchpack Error (watcher): Error: ENOSPC: System limit for number of file watchers reached, watch '/home/.../foundation/basic'
 ```
 
 Apply the solution on https://stackoverflow.com/a/55763478/13480534.
@@ -159,30 +186,13 @@ Apply the solution on https://stackoverflow.com/a/55763478/13480534.
 - 2017: Tailwind CSS
 - 2019: Pico
 
-## Resources
+## General resources
 
 - Symfony:
     - https://symfony.com/doc/current/setup.html#the-symfony-demo-application
     - https://symfony.com/doc/current/configuration/multiple_kernels.html
-- Assets:
-- CSS Frameworks:
-    - Bootstrap:
-        - https://getbootstrap.com/
-        - https://github.com/twbs/bootstrap/tree/main/site/content/docs/5.3/examples
-        - https://symfony.com/doc/current/frontend/encore/bootstrap.html
-    - Foundation:
-        - https://get.foundation/
-    - Milligram:
-        - https://milligram.io/
-    - Pico:
-        - https://picocss.com/
-    - Tailwind:
-        - https://tailwindcss.com/
-        - https://tw-elements.com/
-        - https://www.material-tailwind.com/
-        - https://www.yourigalescot.com/fr/blog/comment-integrer-tailwindcss-v3-a-un-projet-symfony-avec-webpack-encore
-        - https://flowbite.com/
-        - https://alpinejs.dev/
+- Other CSS Frameworks:
+    - https://milligram.io/
 - Examples for use cases:
     - https://colorlib.com/wp/themes/
     - https://preview.colorlib.com/theme/bootstrap/contact-form-04/
