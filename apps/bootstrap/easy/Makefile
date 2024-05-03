@@ -1,3 +1,4 @@
 CSS_FRAMEWORK_NAME = "BOOTSTRAP 🅱️"
-INSTALL_DEPENDENCIES = start composer_install
+INSTALL_DEPENDENCIES = server_start composer_install npm_install npm_watch
+START_DEPENDENCIES = server_start npm_watch
 include ./../../../core.mk

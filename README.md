@@ -105,6 +105,25 @@ Install:
 
 ```shell
 cd symfony-css-frameworks
+. scripts/new-encore.sh "apps/bootstrap/easy" "BOOTSTRAP 🅱️"
+```
+
+```shell
+cd apps/bootstrap/easy
+npm install bootstrap
+npm install sass-loader sass --save-dev
+```
+
+HTML examples used:
+
+- https://getbootstrap.com/docs/5.3/examples/album/
+
+### Tailwind
+
+Install:
+
+```shell
+cd symfony-css-frameworks
 . scripts/new-encore.sh "apps/tailwind/easy" "TAILWIND 🌊"
 ```
 
@@ -149,6 +168,8 @@ Apply the solution on https://stackoverflow.com/a/55763478/13480534.
 - CSS Frameworks:
     - Bootstrap:
         - https://getbootstrap.com/
+        - https://github.com/twbs/bootstrap/tree/main/site/content/docs/5.3/examples
+        - https://symfony.com/doc/current/frontend/encore/bootstrap.html
     - Foundation:
         - https://get.foundation/
     - Milligram:
