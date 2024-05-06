@@ -144,6 +144,11 @@ HTML examples used:
 - https://getbootstrap.com/
 - Examples / Components:
   - https://github.com/twbs/bootstrap/tree/main/site/content/docs/5.3/examples
+  - https://getbootstrap.com/docs/5.3/examples/
+- Preview:
+  - https://getbootstrap.com/docs/5.3/examples/album/
+- Login:
+  - https://getbootstrap.com/docs/5.3/examples/sign-in/
 - Symfony:
   - https://symfony.com/doc/current/frontend/encore/bootstrap.html
 

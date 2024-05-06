@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage • {{ parent()}}{% endblock %}
+
+{% block body %}
+    <h1>Homepage • Pico CSS</h1>
+    <ul>
+        <li><a href="{{ path('app_index') }}">Index</a></li>
+        <li><a href="{{ path('app_preview') }}">Preview</a></li>
+        <li><a href="{{ path('app_login') }}">Log in</a></li>
+    </ul>
+{% endblock %}
