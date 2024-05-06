@@ -156,13 +156,18 @@ npm install foundation-sites
 npm install jquery --save-dev
 ```
 
-HTML examples used:
-
-- https://get.foundation/templates-previews-sites-f6-xy-grid/news-magazine.html.
-
 ### Resouces
 
 - https://get.foundation/
+- Examples:
+  - https://get.foundation/building-blocks/
+  - https://get.foundation/sites/docs/prototyping-utilities.html
+- Preview:
+  - https://get.foundation/templates-previews-sites-f6-xy-grid/news-magazine.html.
+- Login form:
+  - https://get.foundation/building-blocks/blocks/form-login.html
+
+> **From Foundation v6.4, the Float Grid is disabled by default**, replaced by the new [XY Grid](https://get.foundation/sites/docs/xy-grid.html). Unless you need to support IE 10, it is recommended to use the XY Grid.
 
 ## Pico
 
@@ -194,6 +199,12 @@ TODO
 ### Resources
 
 - https://picocss.com/
+- Examples:
+  - https://picocss.com/examples
+- Preview:
+  - https://4mrnhq.csb.app/
+- Login form:
+  - https://picocss.com/docs/forms
 
 ## Tailwind
 
