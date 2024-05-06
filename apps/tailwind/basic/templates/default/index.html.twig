@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage • {{ parent() }}{% endblock %}
+
+{% block body %}
+    <div class="relative rounded-xl overflow-auto p-8">
+        <h1 class="mt-4 text-3xl font-extrabold tracking-[-0.04em] text-black sm:text-5xl sm:leading-[3.5rem]">Homepage • Tailwind CSS</h1>
+        <ul class="list-disc list-inside text-slate-900">
+            <li><a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="{{ path('app_index') }}">Index</a></li>
+            <li><a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="{{ path('app_preview') }}">Preview</a></li>
+            <li><a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="{{ path('app_login') }}">Log in</a></li>
+        </ul>
+    </div>
+{% endblock %}
+

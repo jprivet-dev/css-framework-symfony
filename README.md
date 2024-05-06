@@ -120,7 +120,7 @@ symfony console security:hash-password myPassword
 
 ## Bootstrap
 
-### Basic use case 1: simple example (minimal steps of install)
+### Minimal steps of install
 
 Install:
 
@@ -142,12 +142,14 @@ HTML examples used:
 ### Resources
 
 - https://getbootstrap.com/
-- https://github.com/twbs/bootstrap/tree/main/site/content/docs/5.3/examples
-- https://symfony.com/doc/current/frontend/encore/bootstrap.html
+- Examples / Components:
+  - https://github.com/twbs/bootstrap/tree/main/site/content/docs/5.3/examples
+- Symfony:
+  - https://symfony.com/doc/current/frontend/encore/bootstrap.html
 
 ## Foundation
 
-### Basic use case 1: simple example (minimal steps of install)
+### Minimal steps of install
 
 Install:
 
@@ -159,7 +161,7 @@ npm install jquery --save-dev
 ### Resouces
 
 - https://get.foundation/
-- Examples:
+- Examples / Components:
   - https://get.foundation/building-blocks/
   - https://get.foundation/sites/docs/prototyping-utilities.html
 - Preview:
@@ -171,7 +173,7 @@ npm install jquery --save-dev
 
 ## Pico
 
-### Basic use case 1: simple example (minimal steps of install)
+### Minimal steps of install
 
 Install:
 
@@ -191,15 +193,12 @@ cd apps/pico/basic
 make start # And go on the Local Web Server (on https://127.0.0.1:8000/ for example)
 ```
 
-### Basic use case 2: login form
-
-
 TODO
 
 ### Resources
 
 - https://picocss.com/
-- Examples:
+- Examples / Components:
   - https://picocss.com/examples
 - Preview:
   - https://4mrnhq.csb.app/
@@ -208,7 +207,7 @@ TODO
 
 ## Tailwind
 
-### Basic use case 1: simple example (minimal steps of install)
+### Minimal steps of install
 
 Install:
 
@@ -223,20 +222,27 @@ npm install -D tailwindcss postcss postcss-loader autoprefixer
 npx tailwindcss init -p
 ```
 
-HTML examples used:
-
-- https://tailwindui.com/components/application-ui/application-shells/stacked
-- https://tailwindui.com/components/marketing/sections/feature-sections
-- https://tailwindui.com/components/marketing/elements/flyout-menus
-
 ### Resources
 
 - https://tailwindcss.com/
-- https://tw-elements.com/
-- https://www.material-tailwind.com/
-- https://www.yourigalescot.com/fr/blog/comment-integrer-tailwindcss-v3-a-un-projet-symfony-avec-webpack-encore
-- https://flowbite.com/
-- https://alpinejs.dev/
+- Examples / Components:
+  - https://tailwindui.com/components/#product-application-ui
+- Preview:
+  - https://tailwindui.com/components/application-ui/application-shells/stacked
+  - https://tailwindui.com/components/marketing/sections/feature-sections
+  - https://tailwindui.com/components/marketing/elements/flyout-menus
+- Variants:
+  - https://tw-elements.com/
+  - https://www.material-tailwind.com/
+  - https://flowbite.com/
+- Login:
+  - https://tailwindui.com/components/application-ui/forms/sign-in-forms
+  - https://tailwindui.com/components/application-ui/forms/form-layouts
+  - https://tailwindui.com/components/application-ui/forms/toggles 🔒
+- JS:
+  - https://alpinejs.dev/
+- Symfony:
+  - https://www.yourigalescot.com/fr/blog/comment-integrer-tailwindcss-v3-a-un-projet-symfony-avec-webpack-encore
 
 ## Troubleshooting
 
