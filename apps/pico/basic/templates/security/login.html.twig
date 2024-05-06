@@ -3,41 +3,40 @@
 {% block title %}Log in • {{ parent() }}{% endblock %}
 
 {% block body %}
+    {# @see https://picocss.com/docs/forms #}
     <main class="container" style="width: 500px">
         <form method="post">
-            <fieldset>
-                {% if error %}
-                    <div style="color: var(--pico-del-color)">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-                {% endif %}
+            {% if error %}
+                <div style="color: var(--pico-del-color)">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
 
-                {% if app.user %}
-                    <div>
-                        You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
-                    </div>
-                {% endif %}
+            {% if app.user %}
+                <div>
+                    You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+                </div>
+            {% endif %}
 
-                <h1>Please sign in</h1>
+            <h1>Please sign in</h1>
 
-                <label for="inputUsername">
-                    Username
-                    <input type="text" value="{{ last_username }}" name="username" id="inputUsername" autocomplete="username" required autofocus>
-                </label>
+            <label for="inputUsername">
+                Username
+                <input type="text" value="{{ last_username }}" name="username" id="inputUsername" autocomplete="username" required autofocus>
+            </label>
 
-                <label for="inputPassword">
-                    Password
-                    <input type="password" name="password" id="inputPassword" autocomplete="current-password" required>
-                </label>
+            <label for="inputPassword">
+                Password
+                <input type="password" name="password" id="inputPassword" autocomplete="current-password" required>
+            </label>
 
-                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-                <label>
-                    <input type="checkbox" name="_remember_me" role="switch"> Remember me
-                </label>
+            <label>
+                <input type="checkbox" name="_remember_me" role="switch"> Remember me
+            </label>
 
-                <button type="submit">
-                    Sign in
-                </button>
-            </fieldset>
+            <button type="submit">
+                Sign in
+            </button>
         </form>
     </main>
 {% endblock %}
