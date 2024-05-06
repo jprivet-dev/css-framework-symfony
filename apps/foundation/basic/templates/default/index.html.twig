@@ -3,10 +3,19 @@
 {% block title %}Homepage • {{ parent()}}{% endblock %}
 
 {% block body %}
-    <h1>Homepage • Foundation</h1>
+    <h1>Homepage • Pico CSS</h1>
     <ul>
-        <li><a href="{{ path('app_index') }}">Index</a></li>
-        <li><a href="{{ path('app_preview') }}">Preview</a></li>
-        <li><a href="{{ path('app_login') }}">Log in</a></li>
+        <li>
+            <a href="{{ path('app_index') }}">Index</a>
+            <br><small>Simple homepage</small>
+        </li>
+        <li>
+            <a href="{{ path('app_preview') }}">Preview</a>
+            <br><small>A simple overview of a page</small>
+        </li>
+        <li>
+            <a href="{{ path('app_login') }}">Log in</a>
+            <br><small>Operational login page</small>
+        </li>
     </ul>
 {% endblock %}
