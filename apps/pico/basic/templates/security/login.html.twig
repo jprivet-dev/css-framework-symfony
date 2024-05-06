@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Log in • {{ parent()}}{% endblock %}
+{% block title %}Log in • {{ parent() }}{% endblock %}
 
 {% block body %}
     <main class="container" style="width: 500px">
@@ -30,11 +30,9 @@
 
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-                <div>
-                    <label>
-                        <input type="checkbox" name="_remember_me" role="switch"> Remember me
-                    </label>
-                </div>
+                <label>
+                    <input type="checkbox" name="_remember_me" role="switch"> Remember me
+                </label>
 
                 <button type="submit">
                     Sign in
