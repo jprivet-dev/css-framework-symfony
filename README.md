@@ -51,19 +51,7 @@ We will simulate two levels of use of the CSS framework:
 
 ### Basic use case 1: simple example
 
-Minimal steps of install and display of a simple example
-
-### Basic use case 2: login form
-
-The idea is to use the default connection form layouts of the CSS frameworks, and to check that the coupling with what Symfony generates by default (https://symfony.com/doc/current/security.html) is as easy as possible.
-
-```shell
-composer require symfony/security-bundle
-symfony console make:user
-symfony console make:auth
-```
-
-## Project basic install
+Minimal steps of install and display of a simple example.
 
 1 - Create an empty new project, with [MakerBundle](https://symfony.com/bundles/SymfonyMakerBundle/current/index.html):
 
@@ -83,6 +71,51 @@ npm install
 
 ```shell
 composer require symfony/asset-mapper symfony/asset symfony/twig-pack
+```
+
+### Basic use case 2: login form
+
+The idea is to use the default connection form layouts of the CSS frameworks, and to check that the coupling with what Symfony generates by default (https://symfony.com/doc/current/security.html) is as easy as possible.
+
+```shell
+composer require symfony/security-bundle
+symfony console make:user
+symfony console make:auth
+```
+
+```shell
+$ symfony console make:auth
+
+ What style of authentication do you want? [Empty authenticator]:
+  [0] Empty authenticator
+  [1] Login form authenticator
+ > Login form authenticator
+
+ The class name of the authenticator to create (e.g. AppCustomAuthenticator):
+ > InMemoryUserAuthenticator
+
+ Choose a name for the controller class (e.g. SecurityController) [SecurityController]:
+ > 
+
+ Enter the User class that you want to authenticate (e.g. App\Entity\User) []:
+ > Symfony\Component\Security\Core\User\InMemoryUser
+
+ Do you want to generate a '/logout' URL? (yes/no) [yes]:
+ > 
+
+ Do you want to support remember me? (yes/no) [yes]:
+ > 
+
+ How should remember me be activated? [Activate when the user checks a box]:
+  [0] Activate when the user checks a box
+  [1] Always activate remember me
+ > 
+```
+
+Symfony Password Hash Utility:
+
+```shell
+symfony console security:hash-password myPassword
 ```
 
 ## Bootstrap
@@ -155,40 +188,8 @@ make start # And go on the Local Web Server (on https://127.0.0.1:8000/ for exam
 
 ### Basic use case 2: login form
 
-```shell
-$ symfony console make:auth
 
- What style of authentication do you want? [Empty authenticator]:
-  [0] Empty authenticator
-  [1] Login form authenticator
- > Login form authenticator
-
- The class name of the authenticator to create (e.g. AppCustomAuthenticator):
- > InMemoryUserAuthenticator
-
- Choose a name for the controller class (e.g. SecurityController) [SecurityController]:
- > 
-
- Enter the User class that you want to authenticate (e.g. App\Entity\User) []:
- > Symfony\Component\Security\Core\User\InMemoryUser
-
- Do you want to generate a '/logout' URL? (yes/no) [yes]:
- > 
-
- Do you want to support remember me? (yes/no) [yes]:
- > 
-
- How should remember me be activated? [Activate when the user checks a box]:
-  [0] Activate when the user checks a box
-  [1] Always activate remember me
- > 
-```
-
-Symfony Password Hash Utility:
-
-```shell
-symfony console security:hash-password myPassword
-```
+TODO
 
 ### Resources
 
