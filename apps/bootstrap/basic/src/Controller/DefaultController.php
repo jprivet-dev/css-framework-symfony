@@ -19,4 +19,10 @@ class DefaultController extends AbstractController
     {
         return $this->render('default/preview.html.twig');
     }
+
+    #[Route('/raw', name: 'app_raw')]
+    public function raw(): Response
+    {
+        return $this->render('default/raw.html.twig');
+    }
 }

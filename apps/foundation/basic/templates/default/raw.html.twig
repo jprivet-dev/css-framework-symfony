@@ -1,0 +1,172 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage • {{ parent() }}{% endblock %}
+
+{% block body %}
+    <hr>
+
+    <h1>Title 1</h1>
+    <h2>Title 2</h2>
+    <h3>Title 3</h3>
+    <h4>Title 4</h4>
+    <h5>Title 5</h5>
+    <h6>Title 6</h6>
+
+    <hr>
+
+    <p>You can use the mark tag to
+        <mark>highlight</mark>
+        text.
+    </p>
+    <p>
+        <del>This line of text is meant to be treated as deleted text.</del>
+    </p>
+    <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+    <p>
+        <ins>This line of text is meant to be treated as an addition to the document.</ins>
+    </p>
+    <p><u>This line of text will render as underlined.</u></p>
+    <p><small>This line of text is meant to be treated as fine print.</small></p>
+    <p><strong>This line rendered as bold text.</strong></p>
+    <p><em>This line rendered as italicized text.</em></p>
+
+    <hr>
+
+    <blockquote>
+        <p>A well-known quote, contained in a blockquote element.</p>
+        <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+
+    <hr>
+
+    <ul>
+        <li>This is a list.</li>
+        <li>This is a list.</li>
+        <li>This is a list.</li>
+        <li>Nested lists:
+            <ul>
+                <li>This is a list.</li>
+                <li>This is a list.</li>
+                <li>This is a list.</li>
+            </ul>
+        </li>
+        <li>This is a list.</li>
+        <li>This is a list.</li>
+    </ul>
+
+    <hr>
+
+    <ol>
+        <li>This is a list.</li>
+        <li>This is a list.</li>
+        <li>This is a list.</li>
+        <li>Nested lists:
+            <ol>
+                <li>This is a list.</li>
+                <li>This is a list.</li>
+                <li>This is a list.</li>
+            </ol>
+        </li>
+        <li>This is a list.</li>
+        <li>This is a list.</li>
+    </ol>
+
+    <hr>
+
+    <svg width="100%" height="250" style="text-anchor: middle;" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="#868e96"></rect>
+        <text x="50%" y="50%" fill="#dee2e6" dy=".3em">IMAGE</text>
+    </svg>
+
+    <hr>
+
+    <svg width="200" height="200" style="text-anchor: middle;" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="#868e96"></rect>
+        <text x="50%" y="50%" fill="#dee2e6" dy=".3em">200x200</text>
+    </svg>
+
+    <hr>
+
+    <table>
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <form>
+        <div>
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp">We'll never share your email with anyone else.</div>
+        </div>
+        <div>
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" id="exampleInputPassword1">
+        </div>
+        <div>
+            <label for="exampleSelect">Select menu</label>
+            <select id="exampleSelect">
+                <option selected="">Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div>
+            <input type="checkbox" id="exampleCheck1">
+            <label for="exampleCheck1">Check me out</label>
+        </div>
+        <fieldset>
+            <legend>Radios buttons</legend>
+            <div>
+                <input type="radio" name="radios" id="exampleRadio1">
+                <label for="exampleRadio1">Default radio</label>
+            </div>
+            <div>
+                <input type="radio" name="radios" id="exampleRadio2">
+                <label for="exampleRadio2">Another radio</label>
+            </div>
+        </fieldset>
+        <div>
+            <label for="customFile">Upload</label>
+            <input type="file" id="customFile">
+        </div>
+        <div>
+            <input type="checkbox" role="switch" id="flexSwitchCheckChecked" checked="">
+            <label for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+        </div>
+        <div>
+            <label for="customRange3">Example range</label>
+            <input type="range" min="0" max="5" step="0.5" id="customRange3">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
