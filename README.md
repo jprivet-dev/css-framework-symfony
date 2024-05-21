@@ -118,6 +118,17 @@ Symfony Password Hash Utility:
 symfony console security:hash-password myPassword
 ```
 
+### Comparisons
+
+`login.html.twig`:
+
+| Name                        | Chars (HTML) | Diff |
+|-----------------------------|--------------|------|
+| tailwind::login.html.twig   | 3419         |      |
+| bootstrap::login.html.twig  | 2814         | -18% |
+| foundation::login.html.twig | 1718         | -49% |
+| pico::login.html.twig       | 1440         | -58% |
+
 ## Bootstrap
 
 ### Minimal steps of install
@@ -151,6 +162,12 @@ HTML examples used:
   - https://getbootstrap.com/docs/5.3/examples/sign-in/
 - Symfony:
   - https://symfony.com/doc/current/frontend/encore/bootstrap.html
+- Templates/Themes:
+  - https://startbootstrap.com/
+  - https://github.com/StartBootstrap
+  - https://themes.getbootstrap.com/
+  - https://themes.getbootstrap.com/guide/#customizing-your-theme
+  - https://themes.getbootstrap.com/guide/#integrating-with-frameworks
 
 ## Foundation
 
@@ -173,6 +190,11 @@ npm install jquery --save-dev
   - https://get.foundation/templates-previews-sites-f6-xy-grid/news-magazine.html.
 - Login form:
   - https://get.foundation/building-blocks/blocks/form-login.html
+- Templates/Themes:
+  - https://get.foundation/templates.html
+  - https://mobirise.com/website-templates/foundation-website-templates/:
+    - https://mobirise.com/extensions/edgem5/it-expertise/
+    - https://mobirise.com/extensions/solutionm4/marketingsolution/
 
 > **From Foundation v6.4, the Float Grid is disabled by default**, replaced by the new [XY Grid](https://get.foundation/sites/docs/xy-grid.html). Unless you need to support IE 10, it is recommended to use the XY Grid.
 
@@ -248,6 +270,17 @@ npx tailwindcss init -p
   - https://alpinejs.dev/
 - Symfony:
   - https://www.yourigalescot.com/fr/blog/comment-integrer-tailwindcss-v3-a-un-projet-symfony-avec-webpack-encore
+- Templates/Themes:
+  - https://www.tailwindawesome.com/?order=popular&price=all&type=template
+  - Flowbite Admin Dashboard:
+    - https://www.tailwindawesome.com/resources/flowbite-admin-dashboard
+    - https://github.com/themesberg/flowbite-admin-dashboard
+  - Vue Dashboard Template:
+    - https://www.tailwindawesome.com/resources/vue-dashboard-template
+    - https://github.com/wobsoriano/v-dashboard
+  - Ada:
+    - https://www.tailwindawesome.com/resources/ada
+    - https://github.com/Tailus-UI/ada-html
 
 ## Troubleshooting
 
@@ -271,6 +304,9 @@ Apply the solution on https://stackoverflow.com/a/55763478/13480534.
 
 ## General resources
 
+- https://github.com/troxler/awesome-css-frameworks
+- https://colorlib.com/wp/free-css3-frameworks/
+- https://prismic.io/blog/best-css-frameworks
 - Symfony:
     - https://symfony.com/doc/current/setup.html#the-symfony-demo-application
     - https://symfony.com/doc/current/configuration/multiple_kernels.html
