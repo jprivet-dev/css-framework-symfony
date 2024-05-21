@@ -9,7 +9,7 @@ name=$2
 echo "Project basic install (AssetMapper)"
 echo "==================================="
 
-symfony new "${path}" --no-git
+symfony new "${path}" --version=6.4 --no-git
 cp scripts/Makefile.dist "${path}/Makefile"
 sed -i "s/__NAME__/${name}/g" "${path}/Makefile"
 
