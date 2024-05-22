@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in • {{ parent() }}{% endblock %}
+
+{% block body %}
+    <form method="post">
+        {% if error %}
+            <p>
+                {{ error.messageKey|trans(error.messageData, 'security') }}
+            </p>
+        {% endif %}
+
+        {% if app.user %}
+            <p>
+                You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+            </p>
+        {% endif %}
+
+        <h1>Please sign in</h1>
+
+        <div>
+            <label for="inputUsername">Username</label>
+            <input type="text" value="{{ last_username }}" name="username" id="inputUsername" autocomplete="username" required autofocus>
+        </div>
+
+        <div>
+            <label for="inputPassword">Password</label>
+            <input type="password" name="password" id="inputPassword" autocomplete="current-password" required>
+        </div>
+
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+        <div>
+            <input type="checkbox" name="_remember_me" role="switch" id="inputRememberMe">
+            <label for="inputRememberMe">Remember me</label>
+        </div>
+
+        <button type="submit">
+            Sign in
+        </button>
+    </form>
+{% endblock %}
