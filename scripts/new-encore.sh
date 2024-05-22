@@ -21,3 +21,5 @@ composer require symfony/webpack-encore-bundle
 npm install
 
 make
+
+cd ../../..

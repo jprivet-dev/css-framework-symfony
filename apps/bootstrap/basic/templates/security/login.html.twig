@@ -5,42 +5,16 @@
 {% block stylesheets %}
     {{ parent() }}
     <style>
-        html,
-        body {
-            height: 100%;
-            background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
-        }
-
-        body {
-            display: flex !important;
-        }
-
         .form-signin {
             max-width: 330px;
-            padding: 1rem;
-        }
-
-        .form-signin .form-floating:focus-within {
-            z-index: 2;
-        }
-
-        .form-signin input[type="text"] {
-            margin-bottom: -1px;
-            border-bottom-right-radius: 0;
-            border-bottom-left-radius: 0;
-        }
-
-        .form-signin input[type="password"] {
-            margin-bottom: 10px;
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
+            padding-top: 3rem;
         }
     </style>
 {% endblock %}
 
 {% block body %}
     {# @see https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.3/examples/sign-in/index.html #}
-    <main class="form-signin w-100 m-auto">
+    <main class="form-signin m-auto">
         <form method="post">
             {% if error %}
                 <div class="alert alert-danger" role="alert">
@@ -56,12 +30,12 @@
 
             <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
-            <div class="form-floating">
+            <div class="form-floating my-3">
                 <input type="text" class="form-control" placeholder="Username" value="{{ last_username }}" name="username" id="inputUsername" autocomplete="username" required autofocus>
                 <label for="inputUsername">Username</label>
             </div>
 
-            <div class="form-floating">
+            <div class="form-floating my-3">
                 <input type="password" class="form-control" name="password" id="inputPassword" autocomplete="current-password" placeholder="Password" required>
                 <label for="inputPassword">Password</label>
             </div>

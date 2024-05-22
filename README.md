@@ -126,15 +126,17 @@ wc apps/bootstrap/basic/templates/security/login.html.twig
 wc apps/foundation/basic/templates/security/login.html.twig
 wc apps/pico/basic/templates/security/login.html.twig
 wc apps/raw/basic/templates/security/login.html.twig
+wc apps/bulma/basic/templates/security/login.html.twig
 ```
 
-| Name                        | Chars (count) | Diff (chars) | Diff (%) |
-|-----------------------------|---------------|--------------|----------|
-| tailwind::login.html.twig   | 3419          | +2118        | +162.8%  |
-| bootstrap::login.html.twig  | 2814          | +1513        | +116.3%  |
-| foundation::login.html.twig | 1718          | +417         | +32.1%   |
-| pico::login.html.twig       | 1440          | +139         | +10.7%   |
-| raw::login.html.twig        | 1301          | 0            | 0        |
+| Name                        | Chars (count) | Diff (chars)  | Diff (%)  |
+|-----------------------------|---------------|---------------|-----------|
+| tailwind::login.html.twig   | 3423          | +2120         | +162.7%   |
+| bulma::login.html.twig      | 2579          | +1276         | +97.9%    |
+| bootstrap::login.html.twig  | 2172          | +869          | +66.7%    |
+| foundation::login.html.twig | 1720          | +417          | +32.0%    |
+| pico::login.html.twig       | 1442          | +139          | +10.7%    |
+| raw::login.html.twig        | 1303          | 0             | 0         |
 
 ## Bootstrap
 
@@ -175,6 +177,32 @@ HTML examples used:
   - https://themes.getbootstrap.com/
   - https://themes.getbootstrap.com/guide/#customizing-your-theme
   - https://themes.getbootstrap.com/guide/#integrating-with-frameworks
+
+## Bulma
+
+### Minimal steps of install
+
+Install:
+
+```shell
+cd symfony-css-frameworks
+. scripts/new-encore.sh "apps/bulma/basic" "BULMA ⚛️"
+```
+
+```shell
+cd apps/bootstrap/basic
+npm install bulma
+npm install sass-loader sass --save-dev
+```
+
+HTML examples used:
+
+- https://getbootstrap.com/docs/5.3/examples/album/
+
+### Resources
+
+- https://bulma.io/
+- https://medium.com/weekly-webtips/bulma-and-symfonys-webpack-encore-f79f48c328aa
 
 ## Foundation
 

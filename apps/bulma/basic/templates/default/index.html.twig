@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage • {{ parent() }}{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <h1>Homepage • Bulma</h1>
+        <ul>
+            <li>
+                <a href="{{ path('app_index') }}">Index</a>
+                <br><small>Simple homepage</small>
+            </li>
+            <li>
+                <a href="{{ path('app_preview') }}">Preview</a>
+                <br><small>A simple overview of a page</small>
+            </li>
+            <li>
+                <a href="{{ path('app_login') }}">Log in</a>
+                <br><small>Operational login page</small>
+            </li>
+        </ul>
+    </div>
+{% endblock %}

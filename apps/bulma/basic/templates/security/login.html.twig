@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in • {{ parent() }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .container {
+            width: 330px;
+            padding-top: 1rem;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    {# @see https://bulma.io/documentation/form/general/ #}
+    <section class="section">
+        <div class="container">
+            <div class="content">
+                <form method="post">
+                    {% if error %}
+                        <p class="has-text-danger" role="alert">
+                            {{ error.messageKey|trans(error.messageData, 'security') }}
+                        </p>
+                    {% endif %}
+
+                    {% if app.user %}
+                        <p class="has-text-success" role="alert">
+                            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+                        </p>
+                    {% endif %}
+
+                    <h1>Please sign in</h1>
+
+                    <div class="field">
+                        <label for="inputUsername">Username</label>
+                        <div class="control">
+                            <input type="text" class="input" placeholder="My username" value="{{ last_username }}" name="username" id="inputUsername" autocomplete="username" required autofocus>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="inputPassword">Password</label>
+                        <div class="control">
+                            <input type="password" class="input" name="password" id="inputPassword" autocomplete="current-password" placeholder="My password" required>
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+                    <div class="field">
+                        <div class="control">
+                            <label class="checkbox" for="inputRememberMe">
+                                <input type="checkbox" name="_remember_me" role="switch" id="inputRememberMe">
+                                Remember me
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="button is-link"  type="submit">
+                        Sign in
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

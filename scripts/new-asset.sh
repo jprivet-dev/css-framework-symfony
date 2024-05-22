@@ -20,3 +20,5 @@ composer require --dev symfony/profiler-pack
 composer require symfony/asset-mapper symfony/asset symfony/twig-pack
 
 make
+
+cd ../../..
