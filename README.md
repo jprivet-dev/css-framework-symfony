@@ -73,7 +73,7 @@ npm install
 composer require symfony/asset-mapper symfony/asset symfony/twig-pack
 ```
 
-### Basic use case 2: login form
+### Basic use case 2: login page
 
 The idea is to use the default connection form layouts of the CSS frameworks, and to check that the coupling with what Symfony generates by default (https://symfony.com/doc/current/security.html) is as easy as possible.
 
@@ -118,16 +118,23 @@ Symfony Password Hash Utility:
 symfony console security:hash-password myPassword
 ```
 
-### Comparisons
+Comparisons:
 
-`login.html.twig`:
+```shell
+wc apps/tailwind/basic/templates/security/login.html.twig
+wc apps/bootstrap/basic/templates/security/login.html.twig
+wc apps/foundation/basic/templates/security/login.html.twig
+wc apps/pico/basic/templates/security/login.html.twig
+wc apps/raw/basic/templates/security/login.html.twig
+```
 
-| Name                        | Chars (HTML) | Diff |
-|-----------------------------|--------------|------|
-| tailwind::login.html.twig   | 3419         |      |
-| bootstrap::login.html.twig  | 2814         | -18% |
-| foundation::login.html.twig | 1718         | -49% |
-| pico::login.html.twig       | 1440         | -58% |
+| Name                        | Chars (count) | Diff (chars) | Diff (%) |
+|-----------------------------|---------------|--------------|----------|
+| tailwind::login.html.twig   | 3419          | +2118        | +162.8%  |
+| bootstrap::login.html.twig  | 2814          | +1513        | +116.3%  |
+| foundation::login.html.twig | 1718          | +417         | +32.1%   |
+| pico::login.html.twig       | 1440          | +139         | +10.7%   |
+| raw::login.html.twig        | 1301          | 0            | 0        |
 
 ## Bootstrap
 
