@@ -13,7 +13,8 @@
 
                 {% if app.user %}
                     <div>
-                        You are logged in as {{ app.user.userIdentifier }}, <a class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500" href="{{ path('app_logout') }}">Logout</a>
+                        You are logged in as {{ app.user.userIdentifier }}, <a class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
+                                                                               href="{{ path('app_logout') }}">Logout</a>
                     </div>
                 {% endif %}
 

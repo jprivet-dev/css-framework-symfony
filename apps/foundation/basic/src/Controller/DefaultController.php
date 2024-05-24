@@ -14,15 +14,15 @@ class DefaultController extends AbstractController
         return $this->render('default/index.html.twig');
     }
 
-    #[Route('/preview', name: 'app_preview')]
-    public function preview(): Response
-    {
-        return $this->render('default/preview.html.twig');
-    }
-
-    #[Route('/raw', name: 'app_raw')]
+    #[Route('/overview', name: 'app_overview')]
     public function raw(): Response
     {
-        return $this->render('default/raw.html.twig');
+        return $this->render('default/overview.html.twig');
+    }
+
+    #[Route('/example', name: 'app_example')]
+    public function example(): Response
+    {
+        return $this->render('default/example.html.twig');
     }
 }

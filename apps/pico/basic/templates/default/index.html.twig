@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Homepage • {{ parent()}}{% endblock %}
+{% block title %}Homepage • {{ parent() }}{% endblock %}
 
 {% block body %}
     <h1>Homepage • Pico</h1>
@@ -10,16 +10,16 @@
             <br><small>Simple homepage</small>
         </li>
         <li>
-            <a href="{{ path('app_preview') }}">Preview</a>
-            <br><small>A simple overview of a page</small>
+            <a href="{{ path('app_overview') }}">Overview</a>
+            <br><small>A simple overview page</small>
         </li>
         <li>
             <a href="{{ path('app_login') }}">Log in</a>
             <br><small>Operational login page</small>
         </li>
         <li>
-            <a href="{{ path('app_raw') }}">Raw</a>
-            <br><small>Classless behaviour of typography</small>
+            <a href="{{ path('app_component_navbar') }}">Navbar</a>
+            <br><small>Component: Navbar example</small>
         </li>
     </ul>
 {% endblock %}

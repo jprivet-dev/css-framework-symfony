@@ -138,6 +138,14 @@ wc apps/bulma/basic/templates/security/login.html.twig
 | pico::login.html.twig       | 1442          | +139          | +10.7%    |
 | raw::login.html.twig        | 1303          | 0             | 0         |
 
+### Basic use case 3: navbar
+
+```shell
+wc apps/pico/basic/templates/default/component_navbar.html.twig
+wc apps/bootstrap/basic/templates/default/component_navbar.html.twig
+wc apps/bulma/basic/templates/default/component_navbar.html.twig
+```
+
 ## Bootstrap
 
 ### Minimal steps of install
